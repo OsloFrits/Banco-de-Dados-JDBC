@@ -21,4 +21,14 @@ public class ConqDAO {
                 e.printStackTrace();
             }
     }
+    /*public static void recuperarConq(String nome){
+        String sql = "";
+        PreparedStatement ps = null;
+        try{
+            ps = Conexao.getConexao().prepareStatement(sql);
+            ps.get
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }*/
 }
