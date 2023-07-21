@@ -1,0 +1,4 @@
+user=root
+password=Dudu2106
+db_url=jdbc:mysql://localhost:3306/testedb
+useSSL=false
