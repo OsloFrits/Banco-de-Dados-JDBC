@@ -6,12 +6,10 @@ import java.sql.Connection;
 import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
-        Connection conn = DB.getConn();
-        /*Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         String nome, descricao;
         int resp;
         do {
-            Connection conn = DB.getConn();
             resp = 0;
             System.out.println("Nome da conquista e dps uma pequena descrição: ");
             nome = sc.nextLine();
@@ -25,7 +23,6 @@ public class main {
                 conq.setDescri(descricao);
                 new ConqDAO().cadastrarConq(conq);
             }
-        } while (resp != 0);*/
-        DB.closeConnection();
+        } while (resp != 0);
     }
 }
