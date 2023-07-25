@@ -24,6 +24,6 @@ public class main {
                 new ConqDAO().cadastrarConq(conq);
             }
         } while (resp != 0);*/
-        System.out.println(ConqDAO.recuperarConq());
+        System.out.println(ConqDAO.recuperarConq()); //:)
     }
 }
