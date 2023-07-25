@@ -2,6 +2,15 @@ package Indentidades;
 
 public class Conquista {
     private String nome, descri;
+    private int IDrelacao;
+
+    public int getIDrelacao() {
+        return IDrelacao;
+    }
+
+    public void setIDrelacao(int IDrelacao) {
+        this.IDrelacao = IDrelacao;
+    }
 
     public String getDescri() {
         return descri;
