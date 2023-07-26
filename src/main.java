@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        /*Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         String nome, descricao;
         int resp;
         do {
@@ -23,7 +23,7 @@ public class main {
                 conq.setIDrelacao(relacao);
                 new ConqDAO().cadastrarConq(conq);
             }
-        } while (resp != 0);*/
-        System.out.println(ConqDAO.recuperarConq()); //:)
+        } while (resp != 0);
+        //System.out.println(ConqDAO.recuperarConq()); //Nao esta funcionando junto com o cadastramento.
     }
 }
