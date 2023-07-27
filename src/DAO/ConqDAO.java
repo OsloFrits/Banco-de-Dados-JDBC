@@ -2,7 +2,9 @@ package DAO;
 
 import Indentidades.Conquista;
 import db.DB;
+import db.DbIntegrityException;
 
+import javax.swing.text.html.HTMLDocument;
 import java.sql.*;
 
 public class ConqDAO {
@@ -55,5 +57,46 @@ public class ConqDAO {
             DB.closeConnection();
         }
         return s;
+    }
+    /*public static Conquista pesquisaConq(int id){
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Conquista conq = new Conquista();
+        try{
+            Connection conn = DB.getConexao();
+            ps = conn.prepareStatement("SELECT FROM conquistas WHERE (IDrelacao = ?)");
+            ps.setInt(1,id);
+
+            rs = ps.executeQuery();
+
+            conq.setIDrelacao(rs.getInt("id"));
+            conq.setNome(rs.getString("Nome"));
+            conq.setDescri(rs.getString("Descricao"));
+
+        }catch(SQLException e){
+            e.printStackTrace();
+        }finally {
+            DB.closeResultSet(rs);
+            DB.closeStatement(ps);
+            DB.closeConnection();
+        }
+        return conq;
+    }*///A continuar
+    public static  void deletarConq(int id){
+        PreparedStatement ps = null;
+        try{
+            Connection conn = DB.getConexao();
+
+            ps = conn.prepareStatement("DELETE FROM conquistas WHERE IDrelacao = ?");
+            ps.setInt(1,id);
+            ps.execute();
+
+            System.out.println("DELETADO");
+        }catch(SQLException e){
+            throw new DbIntegrityException(e.getMessage());
+        }finally {
+            DB.closeStatement(ps);
+            DB.closeConnection();
+        }
     }
 }
